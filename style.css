@@ -1,0 +1,46 @@
+dj/* Partie Acceuil */
+.contener_page{
+display: flex;
+flex-wrap: wrap;
+flex-direction: column;
+
+}
+.header{
+    display: flex;
+    background-color: aquamarine;
+    align-items: center;
+    justify-content: center;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: bisque;
+    padding: 20, 20, 20, 20;
+    width: 100%;
+    height: 900px;
+}
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    background-color: rgb(151, 210, 151);
+}
+/* partie gallery */
+
+.main_gallery{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: bisque;
+    padding: 20, 20, 20, 20;
+    width: 100%;
+    height: 900px;
+    
+}
+.photo1{
+    display: flex;
+    flex-direction: column;
+}
+
