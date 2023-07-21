@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
+        <!-- cette méthode en Java script permet d'obtenir des textes généré par un serveur qui va les intégrer à mon HTML -->
         <script>
             fetch('https://v2.jokeapi.dev/joke/Any?lang=fr&amount=10')
                 .then(r=>r.json())
@@ -20,11 +21,10 @@
                 }
             })
         </script>
-    
         <title>Acceuil</title>
     </head>
     <body class="contener_page">
-
+    <!-- Cette partie est la structure en HTML du menu déroulant -->
         <header class="header">
             <nav class="menu_deroulant">
                 <ul class="navbar">
@@ -40,10 +40,10 @@
             </nav>
         </header>
 
-        <main class="main">
+        <main class="main_acceuil">
             <h1>Bienvenue sur le site de la culture photographique</h1> 
             <input type="button" value = "Rafraîchir" onclick="history.go(0)" />
-            <div class="contactez-nous">
+            <div class="formulaire">
                 <h2>Créer votre propre blague</h2>
                 
                 <form action="/page-traitement-donnees" method="post">
@@ -63,24 +63,26 @@
                 </form>
             </div>
 
-            <H2>Venais apprécier les blagues actuelles</H2>
-
-            <div id="contener_article">
-            
-            </div> 
-
-            
-            <h2>Information sur le contenue des autres pages du sites</h2>
-            <div class="article_gallery">
-                <h2>Venais découvrire notre galerrie</h2>
-                <p>Des photos sont mis à votre disposition pour vous donnée un apperçus sur ce qui ce fais de mieu dans la photographie</p>
-                <a href="gallery.html">Dirigez-vous directement vers la page gallery</a>
+            <div class="article-aleatoire">
+                <H2>Venais apprécier les blagues actuelles</H2>
+                <div id="contener_article">
+                
+                </div>
             </div>
 
-            <div class="article_jeux">
-                <h2>Envie de vous détendre !!!</h2>
-                   <p>Le salon du jeux vous permet de jouet et de faire de votre temps libre un pure moment de détente et dévasion</p>
-                   <a href="jeux.html">Dirigez-vous directement vers la page jeux</a>
+            
+            <div class="descriptif_des_differents_pages">
+                <h2>Information sur le contenue des autres pages du sites</h2>
+                <div class="article_gallery">
+                    <h2>Venais découvrire notre galerrie</h2>
+                    <p>Des photos sont mis à votre disposition pour vous donnée un apperçus sur ce qui ce fais de mieu dans la photographie</p>
+                    <a href="gallery.html">Dirigez-vous directement vers la page gallery</a>
+                </div>
+                <div class="article_jeux">
+                    <h2>Envie de vous détendre !!!</h2>
+                       <p>Le salon du jeux vous permet de jouet et de faire de votre temps libre un pure moment de détente et dévasion</p>
+                       <a href="jeux.html">Dirigez-vous directement vers la page jeux</a>
+                </div>
             </div>
 
         </main>
