@@ -4,65 +4,55 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
-        <!-- cette méthode en Java script permet d'obtenir des textes généré par un serveur qui va les intégrer à mon HTML -->
-        <script>
-            fetch('https://v2.jokeapi.dev/joke/Any?lang=fr&amount=10')
-                .then(r=>r.json())
-                .then(articles =>{
-                    const contener = document.getElementById("contener_article")
-                console.log(articles.jokes);
-                for(let i =0; i<articles.jokes.length; i++){
-                    let newsetup= document.createElement('h2');
-                    let newdelivery = document.createElement('p');
-                    newsetup.textContent = articles.jokes[i].setup;
-                    newdelivery.textContent = articles.jokes[i].delivery;
-                    contener.appendChild(newsetup)
-                    contener.appendChild(newdelivery)
-                }
-            })
-        </script>
         <title>Acceuil</title>
+       
     </head>
     <body class="contener_page">
-    <!-- Cette partie est la structure en HTML du menu déroulant -->
+
+        <!-- Cette partie est la structure en HTML du menu déroulant -->
         <header class="header">
+
+            <label class="menu_label"  for="menu_cb">
+                <img src="burger.png" alt="burger">
+            </label>
+            
             <nav class="menu_deroulant">
-                <ul class="navbar">
-                    <li>
-                        <a href="acceuil.html">Menu</a>
-                        <ul class="sous_menu">
-                            <li><a href="acceuil.html">Acceuil</a></li>
-                            <li><a href="gallery.html">Gallery</a></li>
-                            <li><a href="jeux.html">Jeux</a></li>
-                        </ul>
-                    </li>
+                    
+                <ul class="sous_menu">
+                    <li class><a href="acceuil.html">Acceuil</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="jeux.html">Jeux</a></li>
                 </ul>
+
             </nav>
+            <script src="script.js"> </script>
         </header>
 
         <main class="main_acceuil">
+            
             <h1>Bienvenue sur le site de la culture photographique</h1> 
             <input type="button" value = "Rafraîchir" onclick="history.go(0)" />
             <div class="formulaire">
+
                 <h2>Créer votre propre blague</h2>
                 
-                <form action="/page-traitement-donnees" method="post">
-                    <div>
-                        <label for="nom">laisser vous allez donné la devinette</label>
-                        <input type="text" id="nom" name="nom" placeholder="Ex:Quel est la différence entre aurélien et moi ?" required>
+                <form>
+                    <input type="button" value="Ajouter !" onclick="ajouterElement();" />
+                    <div id="conteneur">
+                      <div id="element1">
+                        <input type="text" value="" id="input1" name="input1" />
+                        <input type="button" value="Supprimer n°1 !" id="delete1" />
+                      </div>
+                      ...
+                      <div id="elementn">
+                        <input type="text" value="" id="inputn" name="inputn" />
+                        <input type="button" value="Supprimer n°n !" id="deleten" />
+                      </div>
                     </div>
-                 
-                  
-                    <div>
-                        <label for="message">Votre message</label>
-                        <textarea id="message" name="message" placeholder="Bonjour, je vous contacte car...." required></textarea>
-                    </div>
-                    <div>
-                        <button type="submit">Appuyez et créer</button>
-                    </div>
-                </form>
+                  </form>
             </div>
-
+            
+            <!--Cette partie du programme est relié avec la partie du programme ce trouvant dans le head, qui sert à faire apparître le-->
             <div class="article-aleatoire">
                 <H2>Venais apprécier les blagues actuelles</H2>
                 <div id="contener_article">
