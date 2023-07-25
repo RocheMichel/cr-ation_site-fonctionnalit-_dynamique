@@ -31,33 +31,31 @@
         <main class="main_acceuil">
             
             <h1>Bienvenue sur le site de la culture photographique</h1> 
+            
             <input type="button" value = "Rafraîchir" onclick="history.go(0)" />
+
             <div class="formulaire">
 
-                <h2>Créer votre propre blague</h2>
+                <h2>Créer votre propre article</h2>
                 
                 <form>
-                    <input type="button" value="Ajouter !" onclick="ajouterElement();" />
-                    <div id="conteneur">
-                      <div id="element1">
-                        <input type="text" value="" id="input1" name="input1" />
-                        <input type="button" value="Supprimer n°1 !" id="delete1" />
-                      </div>
-                      ...
-                      <div id="elementn">
-                        <input type="text" value="" id="inputn" name="inputn" />
-                        <input type="button" value="Supprimer n°n !" id="deleten" />
-                      </div>
+                    <div id="element1">
+                        <label for="titre_article">Donner un nom avotre article</label><br>
+                        <input type="text"  id="titre_article" name="Titre de l'article" /><br>
+                        <label for="texte_article">Exprimez votre créativité !!!</label><br>                            
+                        <textarea name="texte_de_larticle" id="texte_article" cols="30" rows="10"></textarea><br>
+                        <input type="button" value="Supprimer l'article" id="delete1" />
                     </div>
-                  </form>
+                    <input type="button" value="Ajouter !" id="add_article" />
+                </form>
             </div>
             
             <!--Cette partie du programme est relié avec la partie du programme ce trouvant dans le head, qui sert à faire apparître le-->
             <div class="article-aleatoire">
                 <H2>Venais apprécier les blagues actuelles</H2>
-                <div id="contener_article">
+                <article id="contener_article">
                 
-                </div>
+                </article>
             </div>
 
             
