@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/dossier css/style.css">
+        <title>Gallery</title>
+    </head>
+    <body class="corp_gallery">
+<!------------------------------------------------------------------------------------------->
+<!--ici commence la partie header de la page gallery-->
+<!------------------------------------------------------------------------------------------->
+        <header class="header">
+
+            <label class="menu_label"  for="menu_cb">
+                <img id="burger" src="/dossier img/burger.png" alt="burger">
+            </label>
+            
+            <nav class="menu_deroulant">
+                    
+                <ul class="sous_menu">
+                    <li><a href="/dossier html/acceuil.html">Acceuil</a></li>
+                    <li><a href="/dossier html/gallery.html">Gallery</a></li>
+                    <li><a href="/dossier html/jeux.html">Jeux</a></li>
+                </ul>
+
+            </nav>
+        </header>
+<!------------------------------------------------------------------------------------------->
+<!--ici commence la partie main ou il y a les photos de la page gallery-->
+<!------------------------------------------------------------------------------------------->
+
+        <main class="main_gallery">
+
+            <h1>La gallerie du bonheur</h1>
+<!------------------------------------------------------------------------------------------->
+<!--affichage des photo soit en mozaique soit en colonne-->
+<!------------------------------------------------------------------------------------------->
+            <div class="iconMozaique_iconColonne">
+                <button class="bouton_mozaique">
+                    <img src="/dossier img/icone_mozaique.png" alt="icon_mozaique">
+                </button>
+                <button class="bouton_colonne">
+                    <img src="/dossier img/icone_colonne.png" alt="icon_colonne">
+                </button>                
+            </div>
+<!------------------------------------------------------------------------------------------->
+<!--le contener qui contiendra les img pokemon-->
+<!------------------------------------------------------------------------------------------->
+            <div class="icon_ajouter_img">
+                <button class="bouton_ajouter">
+                    <img src="/dossier img/img_ajouter.png" alt="icon_ajouter_img">
+                </button>               
+            </div>   
+
+            <div id="image_ajouter">
+
+            </div>
+
+            <div class="contenue_photo">
+
+                <div class="photo">
+                    <h2>voici la photo</h2>
+                    <img src="/dossier img/robot.png" alt="robot">
+                </div>
+                <div class="photo"> 
+                    <h2>voici la photo</h2>
+                    <img src="/dossier img/robot.png" alt="robot">
+                </div>
+                <div class="photo"> 
+                    <h2>voici la photo</h2>
+                    <img src="/dossier img/robot.png" alt="robot">
+                </div> 
+                <div class="photo">  
+                    <h2>voici la photo</h2>
+                    <img src="/dossier img/robot.png" alt="robot">
+                </div>
+                <div class="photo">
+                    <h2>voici la photo</h2>
+                    <img src="/dossier img/robot.png" alt="robot">
+                </div>
+                <div class="photo">  
+                    <h2>voici la photo</h2>
+                    <img src="/dossier img/robot.png" alt="robot">
+                </div>
+                <div class="photo">   
+                    <h2>voici la photo</h2>
+                    <img src="/dossier img/robot.png" alt="robot">
+                </div>  
+                <div class="photo"> 
+                    <h2>voici la photo</h2>
+                    <img src="/dossier img/robot.png" alt="robot">
+                </div>
+            </div>
+            <a href="acceuil.html">Redirigez vous vers la page d'acceuil</a>
+            
+            <script src="/dossir javascript/burger.js"></script>
+            <script src="/dossir javascript/ajouter_suprimer_img.js"></script>
+            <script src="/dossir javascript/gallery.js"></script>
+        </main>
+<!------------------------------------------------------------------------------------------->
+<!--ici commence la partie footer de la page gallery-->>
+<!------------------------------------------------------------------------------------------->
+        <footer class="footer">
+                <p>Copyright 20012/20123</p>
+        </footer>
+    </body>
+</html>

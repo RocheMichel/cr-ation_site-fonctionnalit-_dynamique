@@ -19,19 +19,9 @@ fetch('https://v2.jokeapi.dev/joke/Any?lang=fr&amount=10')
         }
     })
 
-/*------------------------------------------------------------------------------------------------------------*/
-/*C'est éléments me permet d'activer ou désactiver le menu déroulant celon si l'utilisateur click sur le menu burger*/
-/*------------------------------------------------------------------------------------------------------------*/
 
-const burger = document.querySelector (".menu_label"); 
-    burger.addEventListener('click', () => ouvrire_menu());
-const menu = document.querySelector(".menu_deroulant");
-
-function ouvrire_menu () {
-    menu.classList.toggle ('show')
- }
 /*------------------------------------------------------------------------------------------------------------*/
- /*Cette partie me permet de mettre en place une methode pour ajouter du contenue dans mon file d'actualité*/
+/*Cette partie me permet de mettre en place une methode pour ajouter du contenue dans mon file d'actualité*/
 /*------------------------------------------------------------------------------------------------------------*/
 window.addEventListener("DOMContentLoaded", (e) => {
     const delete1 = document.getElementById("delete1")
@@ -53,8 +43,29 @@ window.addEventListener("DOMContentLoaded", (e) => {
         
     }
 
-    
+
     const add_article = document.getElementById("add_article")
     add_article.addEventListener('click', test)
 })
 
+/*------------------------------------------------------------------------------------------------------------*/
+/*création d'image pour la partie galerie*/
+/*------------------------------------------------------------------------------------------------------------*/
+fetch('https://pokeapi.co/api/v2/pokemon/')
+    .then(r=>r.json())
+    .then(img =>{
+        const contenue_img = document.getElementById(".contenue_img")
+      
+        for(let i =0; i<img.jokes; i++){
+            let titre_img= document.createElement('h2');
+            let img_pokemon = document.createElement('img');
+            titre_img.textContent = articles.jokes[i].setup;
+            img_pokemon.textContent = articles.jokes[i].delivery;
+            contener.appendChild(titre_img)
+            contener.appendChild(img_pokemon)
+        }
+    })
+
+    /*------------------------------------------------------------------------------------------------------------*/
+/*Mise en place de l'affichage des photos en affichage mozaique ou colonne partie galerie*/
+/*------------------------------------------------------------------------------------------------------------*/
